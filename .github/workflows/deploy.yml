@@ -15,6 +15,6 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3 # Действие peaceiris/actions-gh-pages используется для автоматического деплоя статических сайтов на GitHub Pages. Оно позволяет легко развернуть содержимое вашего репозитория на GitHub Pages, что делает его доступным по определенному URL.
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.GIT_TOKEN }}
         publish_dir: ./ #содержимое которой будет опубликованно
         destination_dir: ./${{ github.event.release.tag_name }} # содержимое будет скопировано в директорию, имя которой соответствует тегу релиза 
